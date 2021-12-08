@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="defalut.css">
+  <title>Document</title>
+  <style>
+    .flex-container{
+        display: flex;
+
+    }
+    .flex-item{
+      /* flex-grow: 0;  */
+      /* Defalut */
+    }
+    .A{
+      font-size: 20px;
+      flex-grow: 1;  
+    }
+    .B{
+      font-size: 20px;
+      flex-grow: 1;  
+    }
+    .C{
+      font-size: 20px;
+      flex-grow: 2;  
+    }
+/* 크기를 의미하는 것이 아닌 여백을 의미한다 ! */
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item A">aaa</div>
+    <div class="flex-item B">bbb</div>
+    <div class="flex-item C">ccc</div>
+  </div>
+</body>
+</html>
