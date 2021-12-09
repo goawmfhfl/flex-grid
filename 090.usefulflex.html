@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Flex</title>
+	<link rel="stylesheet" href="./default.css">
+	<style>
+		.flex-container {
+      display: flex;
+			width: 500px;
+			margin-left: auto;
+			/* margin: 0 auto; */
+			/* 좌우에 남아있는 마진을 전부 사용해서 가운데로 배치하게한다.*/
+
+			/* margin-left:auto; */
+			/*
+			왼쪽에 있는 마진을 전부 사용하겠다.
+			사용하겠다는 의미는 즉, 여백으로 만들어버리겠다는 의미가 되어버린다.
+			*/
+		}
+		 .flex-item {
+			 width: 100px;
+		 }
+		 .C{
+			 margin-left: auto;
+		 }
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="flex-item A">AAAAAAAAAA</div>
+		<div class="flex-item B">BB</div>
+		<div class="flex-item C">CCCCCC</div>
+	</div>
+</body>
+</html>
+<!--
+
+-->
