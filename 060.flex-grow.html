@@ -25,7 +25,11 @@
     }
     .C{
       font-size: 20px;
-      flex-grow: 2;  
+      /* flex-grow: 2;   */
+      /*
+      C에만 grow를 안 줄 경우
+      box요소 크기만큼만 남아있다.
+      */
     }
 /* 크기를 의미하는 것이 아닌 여백을 의미한다 ! */
 /*flex glow를 사용하면 빈칸 없이 늘려버린다 !*/
@@ -35,7 +39,7 @@
   <div class="flex-container">
     <div class="flex-item A">aaa</div>
     <div class="flex-item B">bbb</div>
-    <div class="flex-item C">ccc</div>
+    <div class="flex-item C">ccccccccc</div>
   </div>
 </body>
 </html>

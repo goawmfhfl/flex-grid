@@ -12,11 +12,14 @@
 
     }
     .flex-item{
+      overflow: hidden;
+      
     }
     .A{
       flex : 0 1 20%;
     }
     .A p{
+      white-space: nowrap;
     }
     .B{
       flex : 0 1 60%;
@@ -27,7 +30,12 @@
 
     /* 
 
-    flex grow, basis 뭐하로써 이러면?
+    flex grow, basis
+    이런식으로 basis의 크기를 지정하더라도
+    p태그가 들어간 박스의 크기를 조정하는 것은 쉽지 않음
+    overflow hidden을 하면 되긴함.
+    
+    대신 text-overflow: ellpsis 는 적용 안됨
     
     */
 

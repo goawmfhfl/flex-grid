@@ -9,27 +9,32 @@
   <style>
     .flex-container{
         display: flex;
-        width: 250px;
     }
     .flex-item{
+      flex-basis: 200px;
     }
     .A{
-      width: 100px;
+      flex-grow: 1;
       flex-shrink: 0;
-      /*컨테이너의 크기가 줄어들 경우 정해진 width값은 변하지 않는다.*/
     }
     .B{
       flex-grow: 1;
       font-size: 20px;
-      /*컨테이너의 크기가 줄어들 경우 아이템의 크기가 유연하게 움직인다.*/
     }
-/* 크기를 의미하는 것이 아닌 여백을 의미한다 ! */
+    /*
+    
+    grow로 인하여 요소의 전체 길이 차지
+    A와 B는 grow를 1씩 차지했기 때문에 전체 길이에서 사이좋게 박스크기 나눠가짐
+    A는 basis 200px로 정해졌기에 크기가 절대로 변하지 않음
+    B는 flex-shrink 기본값 1이기 때문에 basis 200px보다 작아질 수 있음
+    
+    */
   </style>
 </head>
 <body>
   <div class="flex-container">
     <div class="flex-item A">aaa</div>
-    <div class="flex-item B">bbbbbbbbbbbbbbbbbb</div>
+    <div class="flex-item B">bbb</div>
   </div>
 </body>
 </html>
