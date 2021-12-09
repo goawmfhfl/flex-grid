@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Flex</title>
+	<link rel="stylesheet" href="./default.css">
+	<style>
+		.flex-container {
+      display: flex;
+		}
+    .flex-item:nth-child(1) {
+      order: 1;
+		 }
+     .flex-item:nth-child(2) {
+      order: 3;
+		 }
+		 .flex-item:nth-child(3) {
+      order: 2;
+		 }
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="flex-item A">AAAAAAAAAA</div>
+		<div class="flex-item B">BB</div>
+		<div class="flex-item C">CCCCCC</div>
+	</div>
+</body>
+</html>
+<!--
+  시각적인 요소에만 적용된다.
+  스크린 리더로 화면을 읽을 때, order를 이용해 순서를 바꾸는 것은 의미가 없다.
+-->
