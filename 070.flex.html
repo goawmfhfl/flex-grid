@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="defalut.css">
+  <title>Document</title>
+  <style>
+    .flex-container{
+        display: flex;
+
+    }
+    .flex-item{
+    }
+    .A{
+      /* flex:1; */
+      /* flex: 1 1 0; */
+      /* overflow: hidden; */
+      /* width: 20%; */
+      
+    }
+    .A p{
+      /* white-space: nowrap; */
+    }
+    .B{
+      /* flex:3; */
+      /* flex: 3 1 0; */
+      /* width: 60%; */
+    }
+    .C{
+      /* flex:1; */
+      /* flex: 1 1 0; */
+      /* width: 20%; */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item A">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illo optio sunt ratione, eos tempora harum in quia laboriosam commodi et dicta fugit voluptates, tenetur veniam quis blanditiis quae facere!
+      </p>
+      
+    </div>
+    <div class="flex-item B">bbb</div>
+    <div class="flex-item C">ccc</div>
+  </div>
+</body>
+</html>
+<!--
+  .item {
+	flex: 1;
+	/* flex-grow: 1; flex-shrink: 1; flex-basis: 0%; */ 
+	flex: 1 1 auto;
+	/* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+	flex: 1 500px;
+	/* flex-grow: 1; flex-shrink: 1; flex-basis: 500px; */
+}
+
+flex를 사용해서 배치할 경우에는 안에있는 요소로 인하여 item박스의 크기가 영향을 받는다.
+입력한 p태그로 인하여 박스 크기가 변한 것을 알 수 있다.
+그렇기에 width값을 직접 명시해 주는 것이 좋다.
+-->

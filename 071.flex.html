@@ -12,28 +12,32 @@
 
     }
     .flex-item{
-      /* flex-grow: 0;  */
-      /* Defalut */
     }
     .A{
-      font-size: 20px;
-      flex-grow: 1;  
+      overflow: hidden;
+      width: 20%;
+      
+    }
+    .A p{
+      white-space: nowrap;
     }
     .B{
-      font-size: 20px;
-      flex-grow: 1;  
+      width: 60%;
     }
     .C{
-      font-size: 20px;
-      flex-grow: 2;  
+      width: 20%;
     }
-/* 크기를 의미하는 것이 아닌 여백을 의미한다 ! */
-/*flex glow를 사용하면 빈칸 없이 늘려버린다 !*/
+
   </style>
 </head>
 <body>
   <div class="flex-container">
-    <div class="flex-item A">aaa</div>
+    <div class="flex-item A">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi illo optio sunt ratione, eos tempora harum in quia laboriosam commodi et dicta fugit voluptates, tenetur veniam quis blanditiis quae facere!
+      </p>
+      
+    </div>
     <div class="flex-item B">bbb</div>
     <div class="flex-item C">ccc</div>
   </div>
