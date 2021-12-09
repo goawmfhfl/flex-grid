@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Flex</title>
+	<link rel="stylesheet" href="./defalut.css">
+	<style>
+		.flex-container {
+			display: flex;
+			flex-direction: column;
+      /*
+      height:100vw;로 해버리면
+      진짜 딱 화면 크기만큼만 크기가 커져버림
+      스크롤 될 경우의 높이를 고려하지 않음
+      */
+			min-height: 100vh;
+			/* border: 10px solid red; */
+		}
+		 .flex-item {
+			flex: 1 auto;
+		}
+    /* /* */
+		@media (min-width: 600px) {
+			.flex-container {
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+			.flex-item {
+				width: 50%;
+				/* flex-grow: 0; */
+				/* flex: 0 auto; */
+        /*
+        basis : auto = 설정한 width값을 갖는다.
+        width가 설정되어 있는 상태에서 basis : auto를 하면
+        basis는 width값을 갖는다.
+
+        flex basis가 없다면 flex가 설정한만큼의 점유를 갖지 못한다.
+
+        */
+			}
+		}
+		@media (min-width: 900px) {
+			.flex-item {
+				width: 30%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="flex-container">
+		<div class="flex-item">AAAAAAAAAA</div>
+		<div class="flex-item">BB</div>
+		<div class="flex-item">CCCCCC</div>
+		<div class="flex-item">AAAAAAAAAA</div>
+		<div class="flex-item">BB</div>
+		<div class="flex-item">CCCCCC</div>
+		<div class="flex-item">AAAAAAAAAA</div>
+		<div class="flex-item">BB</div>
+		<div class="flex-item">CCCCCC</div>
+	</div>
+</body>
+</html>
+<!--
+  컨테이너부터 다시 그려보기
+-->
