@@ -1,0 +1,22 @@
+body {
+  font-size: 6px;
+}
+.level1 {
+  /*12px*/
+  font-size: 2em;
+}
+.level2 {
+  /*24px*/
+  font-size: 2em;
+}
+.level3 {
+  /*48px*/
+  font-size: 2em;
+}
+.level4 {
+  /*96px*/
+  font-size: 2em;
+}
+/*
+폰트사이즈 즉각적으로 계산하기 어렵다.
+*/

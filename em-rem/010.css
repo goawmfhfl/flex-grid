@@ -1,0 +1,30 @@
+h1 {
+  display: inline-block;
+  font-size: 2rem;
+  background-color: cornflowerblue;
+  padding: 1em;
+}
+/*
+상속받는 부모의 font-size가 너무 작아져도
+padding:10px은 늘어나는 값이 일정하다.
+
+padding: 0.2em을 주게 된다면
+폰트 사이즈가 줄어들면 그에 비례하여 함께 줄어든다.
+*/
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1em;
+  }
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 0.5em;
+  }
+}
+
+/*
+확실히 em을 사용한 장점을 보면 padding 값도 함께 줄어들기 때문에
+rem의 사이즈를 재설정 할 필요는 없어진다.
+
+*/

@@ -1,0 +1,48 @@
+.component {
+  width: 50%;
+  border: 10px solid #000;
+  font-size: 2rem;
+}
+.title {
+  background-color: grey;
+  padding: 0.5em 0.5rem;
+  /*
+  padding은 어떤것을 참고하여 값을 정하는가?
+  바로 기존의 font-size에 고려한 값을 참고하여 값을 정한다.
+
+  title의 font size가 2rem이니깐
+  아무래도 padding을 em으로 했을 때 좀더 크겠지?
+  */
+}
+.content {
+  font-size: 1rem;
+  padding: 0.5em 0.5rem;
+  /*
+  font-size가 1rem이기 때문에
+  아무래도 padding값이 더 적게 들어간 것을 알 수 있다.
+  */
+}
+
+@media (max-width: 600px) {
+  .component {
+    font-size: 1.5rem;
+  }
+}
+
+/*
+
+여기서 문제점이 있는데.
+이럴 경우 title과 content의 행의 간격을
+맞추는 것이 어려워진다. 그렇다면 어떻게 해야할까?
+
+padding에서 양옆의 값을 0.5rem으로 해줌으로써
+left right는 동일한 간격이 유지되게 만들어준다.
+*/
+
+/*
+
+그렇다면 패딩에서 0.5rem을 해줬을 때
+어떤 값을 고려해서 크기를 결정하는걸까?
+
+바로 폰트사이즈이다.
+*/
