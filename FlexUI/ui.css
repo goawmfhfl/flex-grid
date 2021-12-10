@@ -71,7 +71,6 @@
 /* Message List */
 
 .user-item {
-  display: flex;
   font-size: 1.2rem;
   margin-bottom: 1.5em;
 }
@@ -127,3 +126,68 @@
   border-radius: 1em;
   background: white;
 }
+/* Card List */
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.card-image {
+  height: 0;
+  padding-bottom: 60%;
+  background: lightgray;
+  background-color: lightgray;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card-image img {
+  display: none;
+}
+
+.card-desc {
+  flex: 1 1 auto;
+  background-color: #fff;
+  padding: 1em;
+}
+
+@media (min-width: 600px) {
+  .card-container {
+    overflow-x: hidden;
+  }
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin: 0 -1rem;
+  }
+  .card-item {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .card-list {
+  }
+  .card-item {
+    width: 33.33333%;
+  }
+}
+
+/*
+"figure 태그의 이미지는 일반적으로 DB에 있는 이미지를 불러오기 때문에 인라인 CSS로 넣는 것이 합리적입니다."라는 말씀의 좀 더 정확한 이유가 궁금합니다.
+제 추측으로는 이미지 다운로드 완료 전부터 UI크기를 잡기가 img태그보다 유용해서인 것 같은데, 맞나요? 아니면 완료 실패해도 브라우저의 완료 실패 디폴트 이미지를 띄우기 싫다거나..
+추가로 figure의 background로 이미지 설정하는게 웹표준에 반하는건 아닌지도 궁금합니다. 그래서 img태그 안에 alt를 설정해서 넣어두신건가 해서요.
+
+인라인 CSS로 넣는게 낫다는 이야기는,
+따로 클래스로 지정해서 CSS 에서 배경이미지를 넣는 것 보다 합리적이라는 이야기입니다.
+DB에 있는 이미지를 배경이미지로 넣는건데
+CSS 파일에서 .bg { background-image: url( ... ) } 이런 식으로 설정하는게 안맞으니 인라인 방식으로 하시라고 말씀 드린겁니다.
+
+말씀하신 CSS 배경이미지로 넣는 경우와 img 태그로 넣는 경우를 생각해보면
+단순히 장식 요소인 경우는 배경이미지로만 넣어도 무방하지만,
+의미있는 이미지이기 때문에 말씀하신대로 img 태그로 살려둔 것입니다^^
+
+*/
