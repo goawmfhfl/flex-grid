@@ -50,3 +50,13 @@
   font-size: 1rem; /*html root 속성에 상속을 받는다.*/
   background: gold;
 }
+
+/* BulletPoint */
+.info-list-item {
+  display: flex;
+  margin: 1em 0;
+}
+.info-list-item::before {
+  content: '✅';
+  margin-right: 0.5em;
+}
