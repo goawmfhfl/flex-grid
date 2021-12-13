@@ -1,0 +1,38 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+.blog-title {
+  font-weight: bold;
+}
+.search-form {
+}
+input[type='search'] {
+  border: none;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  padding: 0.2em;
+}
+input[type='submit'] {
+  border: none;
+  background-color: gold;
+  border-radius: 0.2rem;
+  padding: 0.2em;
+}
+
+.nav-list {
+  display: flex;
+}
+.nav-list-item {
+  width: 25%;
+  text-align: center;
+  background-color: gold;
+  transition: 0.5s;
+  padding: 0.4rem 0;
+}
+.nav-list-item:hover {
+  width: 35%;
+  background-color: rgb(63, 163, 180);
+  color: #fff;
+}
