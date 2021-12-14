@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./default.css" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25%, auto));
+        grid-template-rows: repeat(2, minmax(100px, auto));
+        gap: 20px;
+      }
+      .grid-item:nth-child(1) {
+        /* z-index: 0; Defalut */
+        z-index: 1;
+        transform: scale(1.4);
+        opacity: 0.7;
+      }
+      .grid-item:nth-child(5) {
+        z-index: 2;
+        transform: scale(1.4);
+        opacity: 0.7;
+      }
+      .grid-item:nth-child(3) {
+        z-index: 3;
+        transform: scale(1.4);
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">A</div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+      <div class="grid-item">D</div>
+      <div class="grid-item">E</div>
+      <div class="grid-item">F</div>
+    </div>
+  </body>
+</html>
