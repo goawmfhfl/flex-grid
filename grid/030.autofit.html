@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./default.css" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-rows: repeat(3, 1fr);
+        /* row는 최소 100px을 유지해라! 컨텐츠 요소가 더 많을경우에는 설정한 100px보다 더 늘어나도 괜찮다 */
+        /* grid-template-columns: repeat(auto-fill, minmax(200px, auto)); */
+        /* column의 너비는 최소 20%로 정하고. 더 늘어나는건 상관없다. auto*/
+        /*만약 픽셀로 채워질 경우 (300px) 최소 300px의 크기를 유지하고 자유롭게 늘어난다. 늘어나는 도중에 박스크기의 여유분이 생기면(가로에 300px 2개 세팅이 가능해지면) 자연스럽게
+        정렬이되기 우측으로 정렬이된다 */
+        /*
+        비교를 위해서 auto-fill자리에 column의 갯수를 명시해 보아라.
+        */
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        /*갯수가 모자란 상황에서 auto-fill같은 경우에는 여백이 생기는 문제가 발생했다.
+        하지만 fit을 쓸 경우 갯수가 모자랄지라도 여백이 생기는 문제가없어진다. 자동으로 fit! 채워준다.*/
+      }
+      .grid-item {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">Lorem ipsum dolor sit amet consectetur.</div>
+      <div class="grid-item">
+        Lorem ipsum dolor sit amet consectetur.consectetur.
+      </div>
+      <div class="grid-item">
+        consectetur.consectetur.consectetur.consectetur.consectetur.consectetur.
+      </div>
+      <!-- <div class="grid-item">D</div>
+      <div class="grid-item">
+        consectetur.consectetur.consectetur.consectetur.consectetur.consectetur.
+      </div>
+      <div class="grid-item">F</div>
+      <div class="grid-item">G</div>
+      <div class="grid-item">H</div>
+      <div class="grid-item">I</div> -->
+    </div>
+  </body>
+</html>
