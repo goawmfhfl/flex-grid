@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./default.css" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25%, auto));
+        grid-template-rows: repeat(4, minmax(10px, auto));
+        gap: 20px;
+        height: 80vw;
+      }
+      .grid-item:nth-child(1) {
+        align-self: start;
+      }
+      .grid-item:nth-child(2) {
+        align-self: center;
+      }
+      .grid-item:nth-child(3) {
+        align-self: end;
+      }
+
+      .grid-item:nth-child(4) {
+        justify-self: start;
+      }
+      .grid-item:nth-child(5) {
+        justify-self: center;
+      }
+      .grid-item:nth-child(6) {
+        justify-self: end;
+      }
+
+      .grid-item:nth-child(7) {
+        place-self: start;
+      }
+      .grid-item:nth-child(8) {
+        place-self: center;
+      }
+      .grid-item:nth-child(9) {
+        place-self: end;
+      }
+
+      .grid-item:nth-child(10) {
+        place-self: stretch;
+      }
+      .grid-item:nth-child(11) {
+        place-items: stretch;
+      }
+      .grid-item:nth-child(12) {
+        place-content: stretch;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">A</div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+      <div class="grid-item">D</div>
+      <div class="grid-item">E</div>
+      <div class="grid-item">F</div>
+      <div class="grid-item">G</div>
+      <div class="grid-item">H</div>
+      <div class="grid-item">I</div>
+      <div class="grid-item">J</div>
+      <div class="grid-item">K</div>
+      <div class="grid-item">L</div>
+    </div>
+  </body>
+</html>
