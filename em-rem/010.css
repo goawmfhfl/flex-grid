@@ -1,8 +1,8 @@
 h1 {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 0.4em;
   background-color: cornflowerblue;
-  padding: 1em;
+  padding: 0.5em;
 }
 /*
 상속받는 부모의 font-size가 너무 작아져도

@@ -1,31 +1,60 @@
 .component {
   width: 50%;
-  border: 10px solid #000;
+  border: 5px solid #000;
   font-size: 2rem;
 }
 .title {
   background-color: grey;
-  padding: 0.5em 0.5rem;
-  /*
-  padding은 어떤것을 참고하여 값을 정하는가?
-  바로 기존의 font-size에 고려한 값을 참고하여 값을 정한다.
-
-  title의 font size가 2rem이니깐
-  아무래도 padding을 em으로 했을 때 좀더 크겠지?
-  */
+  padding: 0.6rem 0.5rem;
 }
 .content {
   font-size: 1rem;
-  padding: 0.5em 0.5rem;
+  padding: 0.6em 0.5rem;
   /*
   font-size가 1rem이기 때문에
   아무래도 padding값이 더 적게 들어간 것을 알 수 있다.
   */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
+  .component {
+    font-size: 1.7rem;
+  }
+  .content {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 900px) {
   .component {
     font-size: 1.5rem;
+  }
+  .content {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 800px) {
+  .component {
+    font-size: 1.3rem;
+  }
+  .content {
+    font-size: 0.4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .component {
+    font-size: 1.1rem;
+  }
+  .content {
+    font-size: 0.3rem;
+  }
+}
+@media (max-width: 600px) {
+  .component {
+    font-size: 0.9rem;
+  }
+  .content {
+    font-size: 0.1rem;
   }
 }
 

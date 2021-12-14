@@ -1,6 +1,6 @@
 h1 {
   font-size: 1.75rem;
-  color: burlywood;
+  color: rgb(75, 131, 216);
   margin: auto;
   text-align: center;
 }
@@ -11,14 +11,14 @@ h1 {
 }
 
 .component {
-  border: 1px solid burlywood;
+  border: 1px solid rgb(75, 131, 216);
   margin: 1em;
 }
 
 .title {
   font-size: 1.5rem;
   padding: 1em;
-  background-color: burlywood;
+  background-color: rgb(75, 131, 216);
 }
 
 .contents {
@@ -26,8 +26,19 @@ h1 {
   padding: 1em;
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 1000px) {
   .container {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 0.75rem;
+    padding: 1em;
+  }
+
+  .contents {
+    font-size: 0.5rem;
+    padding: 1em;
   }
 }
