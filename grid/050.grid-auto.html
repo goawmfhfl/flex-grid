@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./default.css" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(3, minmax(100px, auto)); */
+        gap: 1rem;
+        /*내가 지정한 방식으로 배치가 된다.*/
+        /*통제를 벗어난 것을 통제한다.*/
+        grid-auto-rows: minmax(100px, auto);
+        /*지정하지 않은 rows 역시도 자동으로 크기가 결정된다.
+        grid-template-rows: repeat(3, minmax(100px, auto));
+        와 비교해보자 rows 3칸 까지만 100px이고 나머지는 기본값으로 설정된다.
+        하지만 나머지 마저 100px로 채우고 싶다면 auto로 설정하는것이 좋다.
+        */
+      }
+      .grid-item {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">A</div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+      <div class="grid-item">D</div>
+      <div class="grid-item">E</div>
+      <div class="grid-item">F</div>
+      <div class="grid-item">G</div>
+      <div class="grid-item">H</div>
+      <div class="grid-item">I</div>
+      <div class="grid-item">G</div>
+      <div class="grid-item">H</div>
+      <div class="grid-item">I</div>
+    </div>
+  </body>
+</html>
