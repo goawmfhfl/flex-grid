@@ -1,0 +1,185 @@
+/*Menu*/
+.menu {
+  display: flex;
+}
+
+.menu-item {
+  /* flex-grow: 1; */
+  width: 25%;
+  background: gold;
+  transition: 0.5s;
+}
+
+.menu-item:hover {
+  /* flex-grow: 1.5; */
+  width: 35%;
+  background: crimson;
+}
+
+.menu-link {
+  display: block;
+  padding: 1em; /* 폰트 사이즈 만큼 크기를 주겠다는 의도*/
+  font-size: 1.2em; /* 설정된 html 크기 만큼의 텍스트 크기를 주겠다.*/
+  font-weight: bold;
+  color: #555;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu-link:hover {
+  color: white;
+}
+
+/* search */
+.search-form {
+  display: flex;
+  height: 40px;
+}
+
+.search-form input[type='search'] {
+  flex: 1;
+  min-width: 0;
+  margin-right: 10px;
+  border: 0;
+  border-radius: 0.3em;
+  font-size: 1rem;
+}
+.search-form input[type='submit'] {
+  width: 4em;
+  border: 0;
+  border-radius: 0.3em;
+  font-size: 1rem; /*html root 속성에 상속을 받는다.*/
+  background: gold;
+}
+/* Modal */
+
+.modal-switch {
+  font-size: 2rem;
+}
+
+/* BulletPoint */
+.info-list-item {
+  display: flex;
+  margin: 1em 0;
+}
+.info-list-item::before {
+  content: '✅';
+  margin-right: 0.5em;
+  /*
+  여기서 rem 으로 했다면
+  HTML의 기본 텍스트 기준으로 0.5배 늘어난다.
+  하지만 em을 쓰면 현재 이 list-item 박스에 설정된 폰트 크기를 기준으로 0.5em이 측정된다.
+
+  의도를 명확하게 해야한다.
+  */
+}
+
+/* Message List */
+
+.user-item {
+  display: flex;
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+}
+
+.user-photo {
+  /*
+  현재 figure에는 아무런 요소도 들어가 있지 않음
+  그렇기에 width 값을 주더라도 여유 공간이 없으면 최대한 찌부됨
+  */
+  flex-shrink: 0;
+  /*
+  찌부가 된 이유는 뭐다? 그것은 바로 flex-shrink의 기본 설정이 1이기 때문이다.
+  설정을 0으로 바꿔줄 경우 찌부되지 않는다.
+  */
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5em;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background-image: url(../img/ilbuni.png);
+  background-color: gold;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* Friend List */
+.friend-item {
+  display: flex;
+  align-items: center;
+}
+.user-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Modal */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.dialog {
+  width: 50vw;
+  padding: 2em;
+  border-radius: 1em;
+  background: white;
+}
+/* Card List */
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  gap: 2%;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.card-image {
+  height: 0;
+  padding-bottom: 60%;
+  background: lightgray;
+  background-color: lightgray;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card-image img {
+  display: none;
+}
+
+.card-desc {
+  flex: 1 1 auto;
+  background-color: #fff;
+  padding: 1em;
+}
+
+/*
+"figure 태그의 이미지는 일반적으로 DB에 있는 이미지를 불러오기 때문에 인라인 CSS로 넣는 것이 합리적입니다."라는 말씀의 좀 더 정확한 이유가 궁금합니다.
+제 추측으로는 이미지 다운로드 완료 전부터 UI크기를 잡기가 img태그보다 유용해서인 것 같은데, 맞나요? 아니면 완료 실패해도 브라우저의 완료 실패 디폴트 이미지를 띄우기 싫다거나..
+추가로 figure의 background로 이미지 설정하는게 웹표준에 반하는건 아닌지도 궁금합니다. 그래서 img태그 안에 alt를 설정해서 넣어두신건가 해서요.
+
+인라인 CSS로 넣는게 낫다는 이야기는,
+따로 클래스로 지정해서 CSS 에서 배경이미지를 넣는 것 보다 합리적이라는 이야기입니다.
+DB에 있는 이미지를 배경이미지로 넣는건데
+CSS 파일에서 .bg { background-image: url( ... ) } 이런 식으로 설정하는게 안맞으니 인라인 방식으로 하시라고 말씀 드린겁니다.
+
+말씀하신 CSS 배경이미지로 넣는 경우와 img 태그로 넣는 경우를 생각해보면
+단순히 장식 요소인 경우는 배경이미지로만 넣어도 무방하지만,
+의미있는 이미지이기 때문에 말씀하신대로 img 태그로 살려둔 것입니다^^
+
+*/
