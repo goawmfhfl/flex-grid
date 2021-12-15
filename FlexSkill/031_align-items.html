@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./default.css">
-  <title>Document</title>
-  <style>
-    .flex-container{
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./default.css" />
+    <title>Document</title>
+    <style>
+      .flex-container {
         display: flex;
-        align-items: stretch;
+        /* align-items: stretch; */
         /* flex-direction: column; */
         /* 늘어남: Defalut 값이다. 컨테이너의 높이만큼 높이값이 정해짐 */
         /* align-items: flex-start; */
@@ -18,23 +18,23 @@
         /* align-items: baseline; */
         /*박스안에있는 요소(텍스트)에 따라서 정렬이 된다.*/
         height: 200px;
-    }
-    .A{
-      font-size: 10px;
-    }
-    .B{
-      font-size: 20px;
-    }
-    .C{
-      font-size: 30px;
-    }
-  </style>
-</head>
-<body>
-  <div class="flex-container">
-    <div class="flex-item A">AAAAAAAAAA</div>
-    <div class="flex-item B">BBB</div>
-    <div class="flex-item C">CCCCCCC</div>
-  </div>
-</body>
+      }
+      .A {
+        font-size: 10px;
+      }
+      .B {
+        font-size: 20px;
+      }
+      .C {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item A">AAAAAAAAAA</div>
+      <div class="flex-item B">BBB</div>
+      <div class="flex-item C">CCCCCCC</div>
+    </div>
+  </body>
 </html>

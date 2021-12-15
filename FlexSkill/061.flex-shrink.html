@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./default.css">
-  <title>Document</title>
-  <style>
-    .flex-container{
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./default.css" />
+    <title>Document</title>
+    <style>
+      .flex-container {
         display: flex;
-    }
-    .flex-item{
-      flex-basis: 200px;
-    }
-    .A{
-      flex-grow: 1;
-      flex-shrink: 0;
-    }
-    .B{
-      flex-grow: 1;
-      font-size: 20px;
-    }
-    /*
+      }
+      .flex-item {
+      }
+      .flex-item:nth-child(1) {
+        flex-grow: 1;
+        width: 100px;
+      }
+      .flex-item:nth-child(2) {
+        flex-shrink: 0;
+        width: 100px;
+      }
+      /*
     
     grow로 인하여 요소의 전체 길이 차지
     A와 B는 grow를 1씩 차지했기 때문에 전체 길이에서 사이좋게 박스크기 나눠가짐
@@ -29,12 +28,12 @@
     B는 flex-shrink 기본값 1이기 때문에 basis 200px보다 작아질 수 있음
     
     */
-  </style>
-</head>
-<body>
-  <div class="flex-container">
-    <div class="flex-item A">aaa</div>
-    <div class="flex-item B">bbb</div>
-  </div>
-</body>
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item A">aaa</div>
+      <div class="flex-item B">bbb</div>
+    </div>
+  </body>
 </html>

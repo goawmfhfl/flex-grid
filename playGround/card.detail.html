@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./default.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+        gap: 1rem;
+      }
+      .flex-item {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        border: 0px;
+      }
+      .card-item {
+        margin-bottom: 1em;
+        padding-bottom: 70%;
+        background-image: url(https://pixabay.com/get/ge1320f42262282688c67c7c12e7f81bbee20229ef0b8e02c7b8de1a2f01bd46af1ca852d63eed90d96e75326fbea85ea3532daf78cd5e43b746e03f0da71abad716f3bc37099d39abcf9a7e1305a78f0_1920.jpg);
+        background-color: lightgray;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .card-desc {
+        flex-grow: 1;
+      }
+      .flex-container {
+        display: flex;
+        border: 0px;
+      }
+      .item:nth-child(1) {
+        width: 30%;
+      }
+      .item:nth-child(2) {
+        width: 40%;
+        margin-left: auto;
+      }
+
+      .price:nth-child(1) {
+      }
+      .price:nth-child(2) {
+        margin-left: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="grid-container">
+        <div class="flex-item">Travel Together ✈️</div>
+        <div class="flex-item">
+          <div class="item">item1</div>
+          <div class="item">item2</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="grid-container">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+          <div class="flex-item">4</div>
+        </div>
+      </nav>
+      <div class="card">
+        <ul class="grid-container">
+          <li class="flex-item">
+            <a href="#none">
+              <figure class="card-item"></figure>
+              <div class="card-desc">
+                <div class="flex-container">
+                  <span class="flex-item item">a</span>
+                  <span class="flex-item item">b</span>
+                </div>
+                <p class="flex-item">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <div class="sum flex-container">
+                  <span class="flex-item price">price</span>
+                  <span class="flex-item price">price</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="flex-item">
+            <a href="#none">
+              <figure class="card-item"></figure>
+              <div class="card-desc">
+                <div class="flex-container">
+                  <span class="flex-item item">a</span>
+                  <span class="flex-item item">b</span>
+                </div>
+                <p class="flex-item">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <div class="sum flex-container">
+                  <span class="flex-item price">price</span>
+                  <span class="flex-item price">price</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="flex-item">
+            <a href="#none">
+              <figure class="card-item"></figure>
+              <div class="card-desc">
+                <div class="flex-container">
+                  <span class="flex-item item">a</span>
+                  <span class="flex-item item">b</span>
+                </div>
+                <p class="flex-item">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <div class="sum flex-container">
+                  <span class="flex-item price">price</span>
+                  <span class="flex-item price">price</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="flex-item">
+            <a href="#none">
+              <figure class="card-item"></figure>
+              <div class="card-desc">
+                <div class="flex-container">
+                  <span class="flex-item item">a</span>
+                  <span class="flex-item item">b</span>
+                </div>
+                <p class="flex-item">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <div class="sum flex-container">
+                  <span class="flex-item price">price</span>
+                  <span class="flex-item price">price</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="flex-item">
+            <a href="#none">
+              <figure class="card-item"></figure>
+              <div class="card-desc">
+                <div class="flex-container">
+                  <span class="flex-item item">a</span>
+                  <span class="flex-item item">b</span>
+                </div>
+                <p class="flex-item">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <div class="sum flex-container">
+                  <span class="flex-item price">price</span>
+                  <span class="flex-item price">price</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="flex-item">
+            <a href="#none">
+              <figure class="card-item"></figure>
+              <div class="card-desc">
+                <div class="flex-container">
+                  <span class="flex-item item">a</span>
+                  <span class="flex-item item">b</span>
+                </div>
+                <p class="flex-item">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <div class="sum flex-container">
+                  <span class="flex-item price">price</span>
+                  <span class="flex-item price">price</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="flex-item">
+            <a href="#none">
+              <figure class="card-item"></figure>
+              <div class="card-desc">
+                <div class="flex-container">
+                  <span class="flex-item item">a</span>
+                  <span class="flex-item item">b</span>
+                </div>
+                <p class="flex-item">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <div class="sum flex-container">
+                  <span class="flex-item price">price</span>
+                  <span class="flex-item price">price</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="flex-item">
+            <a href="#none">
+              <figure class="card-item"></figure>
+              <div class="card-desc">
+                <div class="flex-container">
+                  <span class="flex-item item">a</span>
+                  <span class="flex-item item">b</span>
+                </div>
+                <p class="flex-item">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <div class="sum flex-container">
+                  <span class="flex-item price">price</span>
+                  <span class="flex-item price">price</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="flex-item">
+            <a href="#none">
+              <figure class="card-item"></figure>
+              <div class="card-desc">
+                <div class="flex-container">
+                  <span class="flex-item item">a</span>
+                  <span class="flex-item item">b</span>
+                </div>
+                <p class="flex-item">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <div class="sum flex-container">
+                  <span class="flex-item price">price</span>
+                  <span class="flex-item price">price</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
